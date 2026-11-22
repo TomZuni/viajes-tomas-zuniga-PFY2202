@@ -15,7 +15,11 @@ const MENSAJES = {
   },
   'no-encontrado': {
     titulo: 'No encontramos lo que buscas',
-    texto: 'Ese contenido no existe o fue retirado. Puedes volver al listado y elegir otro.',
+    texto: 'Ese contenido no existe o fue retirado. Puedes volver al listado de destinos y elegir otro.',
+  },
+  graphql: {
+    titulo: 'El servicio de vuelos y hoteles falló',
+    texto: 'La consulta no pudo completarse en este momento. Puedes reintentar o revisar otro destino mientras tanto.',
   },
   servidor: {
     titulo: 'El servidor tuvo un problema',

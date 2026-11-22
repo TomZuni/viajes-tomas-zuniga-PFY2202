@@ -7,4 +7,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: './',
   plugins: [react(), tailwindcss()],
+  // El servidor mock (MSW + GraphQL) pesa más de 500 kB y se carga en un archivo aparte; es esperado.
+  build: { chunkSizeWarningLimit: 700 },
 })
