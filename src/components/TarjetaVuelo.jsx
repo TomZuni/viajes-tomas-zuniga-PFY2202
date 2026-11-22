@@ -5,6 +5,8 @@ import { tarjeta, boton, botonAcento, botonSecundario } from '../estilos.js'
 import { formatoPrecio, formatoFecha, formatoHoraDe, formatoDuracion } from '../utils.js'
 
 export default function TarjetaVuelo({ vuelo, elegido, onElegir, onQuitar }) {
+  // Si el vuelo llega otro día (por ejemplo, viajes largos nocturnos) se muestra "+1".
+  const diasDeDiferencia = Math.round((new Date(vuelo.llegada.slice(0, 10)) - new Date(vuelo.salida.slice(0, 10))) / 86400000)
   const escalas = vuelo.escalas === 0 ? 'Directo' : `${vuelo.escalas} ${vuelo.escalas === 1 ? 'escala' : 'escalas'}`
 
   return (
@@ -28,7 +30,10 @@ export default function TarjetaVuelo({ vuelo, elegido, onElegir, onQuitar }) {
           <p>{escalas}</p>
         </div>
         <div className="text-center">
-          <p className="text-2xl font-bold">{formatoHoraDe(vuelo.llegada)}</p>
+          <p className="text-2xl font-bold">
+            {formatoHoraDe(vuelo.llegada)}
+            {diasDeDiferencia > 0 && <sup className="ml-0.5 text-xs font-semibold text-sol-600" title="Llega al día siguiente">+{diasDeDiferencia}</sup>}
+          </p>
           <p className="text-xs text-noche-700">{vuelo.destino}</p>
         </div>
       </div>
