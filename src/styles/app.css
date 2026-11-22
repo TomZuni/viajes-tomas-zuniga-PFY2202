@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Colores de la marca: mar y sol */
+@theme {
+  --color-cielo-50: #f0f7fb;
+  --color-cielo-100: #dcebf5;
+  --color-cielo-600: #0e7490;
+  --color-cielo-700: #155e75;
+  --color-noche-700: #1d4565;
+  --color-noche-800: #12324d;
+  --color-noche-900: #0b2239;
+  --color-sol-500: #f97316;
+  --color-sol-600: #c2410c;
+  --color-sol-700: #9a3412;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--color-cielo-50);
+  color: var(--color-noche-900);
+}
+
+/* Barra de carga global: una franja que se desliza mientras hay peticiones */
+@keyframes deslizar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+.barra-carga { animation: deslizar 1.1s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .barra-carga, .animate-spin, .animate-pulse { animation-duration: 3s; }
+}
