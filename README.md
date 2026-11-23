@@ -219,13 +219,6 @@ npm run build      # genera la carpeta dist para producción
 npm run preview    # prueba la versión de producción
 ```
 
-## Publicar en GitHub
-
-1. Subir el código a la rama `main` del repositorio `viajes-tomas-zuniga-PFY2202`.
-2. Ejecutar `npm run deploy`: compila el proyecto y sube la carpeta `dist` a la rama `gh-pages`.
-3. En GitHub: **Settings → Pages → Branch: `gh-pages` / `/ (root)`**.
-4. El sitio queda en `https://TU-USUARIO.github.io/viajes-tomas-zuniga-PFY2202/`.
-5. Compartir la URL del repositorio con el docente.
 
 ## Tecnologías
 
