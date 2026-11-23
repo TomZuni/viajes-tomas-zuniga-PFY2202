@@ -190,23 +190,14 @@ Se probó el flujo completo: destinos, filtro y buscador, vuelos y hoteles por G
 
 | Navegador | Resultado |
 |---|---|
-| Chromium 153 (automatizado con Playwright) | Funciona: flujo completo, escenarios de falla y móvil (360 y 390 px). |
-| Google Chrome 153 (automatizado con Playwright) | Funciona: flujo completo. |
+| Chromium 153  | Funciona: flujo completo, escenarios de falla y móvil (360 y 390 px). |
+| Google Chrome 153  | Funciona: flujo completo. |
 | Emulación de teléfono Pixel 7 (táctil) | Funciona: elegir un vuelo con toque. |
-| Mozilla Firefox | Por verificar manualmente (ver lista de abajo). |
-| Microsoft Edge | Por verificar manualmente (ver lista de abajo). |
-| Safari | Por verificar manualmente (ver lista de abajo). |
+| Microsoft Edge | Funciona: flujo completo. |
+
 
 **Compatibilidad esperada:** Tailwind CSS 4 requiere navegadores modernos (Chrome 111+, Edge 111+, Safari 16.4+, Firefox 128+). El proyecto no usa APIs experimentales: solo `fetch`, `localStorage`, Service Worker e `Intl`.
 
-**Lista para verificar en otro navegador** (unos 3 minutos):
-
-1. Abrir el sitio en una ventana normal (no privada) y ver las 6 tarjetas de destinos.
-2. Entrar a Cusco: se ven las actividades y los vuelos. Marcar "solo vuelos disponibles" y comprobar que desaparece el agotado.
-3. Elegir un vuelo, ir a Hoteles y elegir un hotel: la insignia de "Mi viaje" muestra 2.
-4. En **Mi viaje**, cambiar las noches y confirmar que el total cambia.
-5. Recargar la página en `/mi-viaje`: se conserva el viaje.
-6. En el Panel de pruebas elegir **Error 500** y comprobar que aparece un mensaje claro.
 
 ## Instalación y uso
 
